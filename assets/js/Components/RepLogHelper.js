@@ -1,6 +1,5 @@
 'use strict';
 
-
 /**
  * A "private" object
  */
@@ -35,5 +34,4 @@ class Helper {
     }
 }
 
-
-module.exports = Helper;
+export default Helper;
