@@ -2,7 +2,7 @@
 
 const Helper = require('./RepLogHelper');
 const $ = require('jquery');
-const swal = require('swalalert2');
+const swal = require('sweetalert2');
 
 let HelperInstances = new WeakMap();
 
