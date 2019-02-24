@@ -35,7 +35,7 @@
         <div class="col-md-5">
             <div class="leaderboard">
                 <h2 class="text-center">
-                    <img class="dumbbell" src="{{ asset('assets/images/dumbbell.png') }}" />
+                    <img class="dumbbell" src="{{ asset('build/static/dumbbell.png') }}" />
                     Leaderboard
                 </h2>
 
@@ -48,7 +48,7 @@
 {% block stylesheets %}
     {{ parent() }}
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.11.0/dist/sweetalert2.min.css" />
+    <link rel="stylesheet" href="{{ asset('build/rep_log.css') }}" />
 {% endblock %}
 
 {% block javascripts %}

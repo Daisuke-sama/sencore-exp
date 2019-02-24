@@ -1,4 +1,5 @@
 var Encore = require('@symfony/webpack-encore');
+const CopyWebpackConfig = require('copy-webpack-plugin');
 
 Encore
     // the project directory where all compiled assets will be stored
@@ -13,8 +14,14 @@ Encore
     .addEntry('login', './assets/js/login.js')
     .addEntry('layout', './assets/js/layout.js')
 
+    .addPlugin(new CopyWebpackConfig([
+        // copies to {output}/static
+        {from: './assets/static', to: 'static'}
+    ]))
+
     .enableBuildNotifications()
 ;
 
 // exports the final config
 module.exports = Encore.getWebpackConfig();
+console.log(module.exports);
