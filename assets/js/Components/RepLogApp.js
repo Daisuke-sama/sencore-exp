@@ -3,6 +3,7 @@
 const Helper = require('./RepLogHelper');
 const $ = require('jquery');
 const swal = require('sweetalert2');
+const Routing = require('./Routing');
 require('sweetalert2/dist/sweetalert2.css');
 
 let HelperInstances = new WeakMap();
