@@ -9,6 +9,8 @@ Encore
     .setPublicPath('/build')
 
     .autoProvidejQuery()
+    .enableSassLoader()
+    .enableSourceMaps(!Encore.isProduction())
 
     .addEntry('rep_log', './assets/js/rep_log.js')
     .addEntry('login', './assets/js/login.js')
