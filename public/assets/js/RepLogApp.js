@@ -1,8 +1,10 @@
 'use strict';
 
 const Helper = require('./RepLogHelper');
+const $ = require('jquery');
+const swal = require('swalalert2');
 
-(function(window, $, Routing, swal) {
+(function (window, Routing) {
 
     let HelperInstances = new WeakMap();
 
@@ -115,10 +117,10 @@ const Helper = require('./RepLogHelper');
             }
 
             this._saveRepLog(formData)
-            .then((data) => {
-                this._clearForm();
-                this._addRow(data);
-            }).catch((errorData) => {
+                .then((data) => {
+                    this._clearForm();
+                    this._addRow(data);
+                }).catch((errorData) => {
                 this._mapErrorsToForm(errorData.errors);
             });
         }
@@ -211,4 +213,4 @@ const Helper = require('./RepLogHelper');
 `;
 
     window.RepLogApp = RepLogApp;
-})(window, jQuery, Routing, swal);
+})(window, Routing);
