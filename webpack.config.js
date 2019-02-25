@@ -14,7 +14,12 @@ Encore
 
     .addEntry('rep_log', './assets/js/rep_log.js')
     .addEntry('login', './assets/js/login.js')
-    .addEntry('layout', './assets/js/layout.js')
+    //.addEntry('layout', './assets/js/layout.js')
+    // .splitEntryChunks()
+    // .configureSplitChunks(function() {
+    //  max-weight: 0,
+    // })
+    .createSharedEntry('layout', './assets/js/layout.js')
 
     .addPlugin(new CopyWebpackConfig([
         // copies to {output}/static
