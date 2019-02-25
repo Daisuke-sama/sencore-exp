@@ -8,6 +8,9 @@ Encore
     // the public path used by the web server to access the previous directory
     .setPublicPath('/build')
 
+    .cleanupOutputBeforeBuild()
+    .enableVersioning()
+
     .autoProvidejQuery()
     .enableSassLoader()
     .enableSourceMaps(!Encore.isProduction())
